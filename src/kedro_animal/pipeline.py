@@ -73,14 +73,22 @@ def create_pipelines(**kwargs) -> Dict[str, Pipeline]:
                 inputs=["cat", "weasel", "elephant", "bear"],
                 outputs=["pig", "giraffe"],
                 name="shark",
+                tags=["medium", "large"],
             ),
             node(
                 salmon,
                 inputs=["dog", "params:rabbit", "parameters", "cat"],
                 outputs=["sheep", "horse"],
                 name="salmon",
+                tags=["small"],
             ),
-            node(trout, inputs=["pig", "sheep"], outputs=["whale"], name="trout"),
+            node(
+                trout,
+                inputs=["pig", "sheep"],
+                outputs=["whale"],
+                name="trout",
+                tags=["small"],
+            ),
         ]
     )
     data_engineering_pipeline = de.create_pipeline()

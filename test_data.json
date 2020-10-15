@@ -279,7 +279,9 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "small"
+            ],
             "type": "task"
         },
         {
@@ -289,7 +291,10 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "large",
+                "medium"
+            ],
             "type": "task"
         },
         {
@@ -299,7 +304,9 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "small"
+            ],
             "type": "task"
         },
         {
@@ -310,7 +317,10 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "large",
+                "medium"
+            ],
             "type": "data"
         },
         {
@@ -321,7 +331,11 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "large",
+                "medium",
+                "small"
+            ],
             "type": "data"
         },
         {
@@ -332,7 +346,9 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "small"
+            ],
             "type": "data"
         },
         {
@@ -343,7 +359,10 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "large",
+                "medium"
+            ],
             "type": "data"
         },
         {
@@ -354,7 +373,10 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "large",
+                "medium"
+            ],
             "type": "data"
         },
         {
@@ -365,7 +387,9 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "small"
+            ],
             "type": "data"
         },
         {
@@ -376,7 +400,9 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "small"
+            ],
             "type": "parameters"
         },
         {
@@ -387,7 +413,11 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "large",
+                "medium",
+                "small"
+            ],
             "type": "data"
         },
         {
@@ -398,7 +428,9 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "small"
+            ],
             "type": "data"
         },
         {
@@ -409,7 +441,10 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "large",
+                "medium"
+            ],
             "type": "data"
         },
         {
@@ -420,7 +455,9 @@
             "pipelines": [
                 "__default__"
             ],
-            "tags": [],
+            "tags": [
+                "small"
+            ],
             "type": "data"
         }
     ],
@@ -443,5 +480,18 @@
         }
     ],
     "selected_pipeline": "__default__",
-    "tags": []
+    "tags": [
+        {
+            "id": "large",
+            "name": "Large"
+        },
+        {
+            "id": "medium",
+            "name": "Medium"
+        },
+        {
+            "id": "small",
+            "name": "Small"
+        }
+    ]
 }
