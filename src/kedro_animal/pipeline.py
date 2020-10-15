@@ -66,7 +66,7 @@ def create_pipelines(**kwargs) -> Dict[str, Pipeline]:
         A mapping from a pipeline name to a ``Pipeline`` object.
 
     """
-    de_pipelien = Pipeline(
+    de_pipeline = Pipeline(
         [
             node(
                 shark,
@@ -82,21 +82,23 @@ def create_pipelines(**kwargs) -> Dict[str, Pipeline]:
                 name="salmon",
                 tags=["small"],
             ),
+        ]
+    )
+    ds_pipeline = Pipeline(
+        [
             node(
                 trout,
                 inputs=["pig", "sheep"],
                 outputs=["whale"],
                 name="trout",
                 tags=["small"],
-            ),
+            )
         ]
     )
-    data_engineering_pipeline = de.create_pipeline()
-    data_science_pipeline = ds.create_pipeline()
 
     return {
-        "de": data_engineering_pipeline,
-        "ds": data_science_pipeline,
-        "__default__": de_pipelien,
+        "de": de_pipeline,
+        "ds": ds_pipeline,
+        "__default__": de_pipeline + ds_pipeline,
         "empty": Pipeline([]),
     }
