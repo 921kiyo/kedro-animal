@@ -31,7 +31,7 @@
 
 from typing import Dict
 
-from kedro.pipeline import Pipeline
+from kedro.pipeline import Pipeline, node
 
 from kedro_animal.pipelines import data_engineering as de
 from kedro_animal.pipelines import data_science as ds
@@ -44,6 +44,18 @@ from kedro_animal.pipelines import data_science as ds
 # -------------------------------------------------------------------------
 
 
+def shark(input1, input2, input3, input4):
+    return input1, input3
+
+
+def salmon(dog, rabbit, parameters, cat):
+    return input1, input2
+
+
+def trout(pig, sheep):
+    return input1
+
+
 def create_pipelines(**kwargs) -> Dict[str, Pipeline]:
     """Create the project's pipeline.
 
@@ -54,12 +66,29 @@ def create_pipelines(**kwargs) -> Dict[str, Pipeline]:
         A mapping from a pipeline name to a ``Pipeline`` object.
 
     """
-
+    de_pipelien = Pipeline(
+        [
+            node(
+                shark,
+                inputs=["cat", "weasel", "elephant", "bear"],
+                outputs=["pig", "giraffe"],
+                name="shark",
+            ),
+            node(
+                salmon,
+                inputs=["dog", "params:rabbit", "parameters", "cat"],
+                outputs=["sheep", "horse"],
+                name="salmon",
+            ),
+            node(trout, inputs=["pig", "sheep"], outputs=["whale"], name="trout"),
+        ]
+    )
     data_engineering_pipeline = de.create_pipeline()
     data_science_pipeline = ds.create_pipeline()
 
     return {
         "de": data_engineering_pipeline,
         "ds": data_science_pipeline,
-        "__default__": data_engineering_pipeline + data_science_pipeline,
+        "__default__": de_pipelien,
+        "empty": Pipeline([]),
     }

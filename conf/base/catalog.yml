@@ -47,4 +47,52 @@ example_iris_data:
   type: pandas.CSVDataSet
   filepath: data/01_raw/iris.csv
 
+dog:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+  layer: raw
 
+cat:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+  layer: raw
+
+weasel:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+  layer: raw
+
+elephant:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+  layer: raw
+
+bear:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+  layer: raw
+
+sheep:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+  layer: primary
+
+pig:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+  layer: feature
+
+horse:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+  layer: "model output"
+
+whale:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+  layer: "model output"
+
+giraffe:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/iris.csv
+  layer: "model output"
