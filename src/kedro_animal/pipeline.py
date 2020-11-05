@@ -77,7 +77,7 @@ def create_pipelines(**kwargs) -> Dict[str, Pipeline]:
             ),
             node(
                 salmon,
-                inputs=["dog", "params:rabbit", "parameters", "cat"],
+                inputs=["dog@pandas", "params:rabbit", "parameters", "cat"],
                 outputs=["sheep", "horse"],
                 name="salmon",
                 tags=["small"],
@@ -85,15 +85,7 @@ def create_pipelines(**kwargs) -> Dict[str, Pipeline]:
         ]
     )
     ds_pipeline = Pipeline(
-        [
-            node(
-                trout,
-                inputs=["pig", "sheep"],
-                outputs=["whale"],
-                name="trout",
-                tags=["small"],
-            )
-        ]
+        [node(trout, inputs=["pig", "sheep"], outputs=["whale"], name="trout")]
     )
 
     return {

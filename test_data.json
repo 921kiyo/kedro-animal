@@ -2,26 +2,26 @@
     "edges": [
         {
             "source": "e4951252",
-            "target": "83b035ea"
+            "target": "443cf06a"
         },
         {
             "source": "c38d4c6a",
-            "target": "83b035ea"
+            "target": "443cf06a"
         },
         {
             "source": "f1f1425b",
-            "target": "83b035ea"
+            "target": "443cf06a"
         },
         {
             "source": "9d989e8d",
-            "target": "83b035ea"
+            "target": "443cf06a"
         },
         {
-            "source": "83b035ea",
+            "source": "443cf06a",
             "target": "6525f2e6"
         },
         {
-            "source": "83b035ea",
+            "source": "443cf06a",
             "target": "091b5035"
         },
         {
@@ -70,7 +70,7 @@
     "nodes": [
         {
             "full_name": "salmon",
-            "id": "83b035ea",
+            "id": "443cf06a",
             "name": "salmon",
             "pipelines": [
                 "de",
@@ -129,7 +129,7 @@
         {
             "full_name": "dog",
             "id": "e4951252",
-            "layer": "raw",
+            "layer": null,
             "name": "Dog",
             "pipelines": [
                 "de",
@@ -266,9 +266,7 @@
                 "ds",
                 "__default__"
             ],
-            "tags": [
-                "small"
-            ],
+            "tags": [],
             "type": "task"
         },
         {
@@ -280,9 +278,7 @@
                 "ds",
                 "__default__"
             ],
-            "tags": [
-                "small"
-            ],
+            "tags": [],
             "type": "data"
         }
     ],
