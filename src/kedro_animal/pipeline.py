@@ -45,14 +45,20 @@ from kedro_animal.pipelines import data_science as ds
 
 
 def shark(input1, input2, input3, input4):
+    """This node is a shark node.
+    """
     return input1, input3
 
 
 def salmon(dog, rabbit, parameters, cat):
+    """This node is a salmon node.
+    """
     return input1, input2
 
 
 def trout(pig, sheep):
+    """This node is a trout node.
+    """
     return input1
 
 
